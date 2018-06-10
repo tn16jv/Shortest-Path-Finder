@@ -108,15 +108,17 @@ class TravelPanel extends JPanel implements ActionListener {
     private void drawVertices(Graphics2D g2) {
         if (drawVertices) {
             // First of the vertices visited gets filled in
+            g2.setColor(Color.GREEN);
             g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - 9,
                     Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - 9, 18, 18));
-            for (int i=1; i<path.length; i++)
-                    g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i-1]][0] - leftX) * compressionX + baseX - 5,
-                            Math.abs(coords[path[i-1]][1] - topY) * compressionY + baseY - 5, 10, 10));
+            g2.setColor(Color.RED);
             // Last of the vertices visited gets filled in
-            if (drawVertices)
-                g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - 9,
-                        Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - 9, 18, 18));
+            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - 9,
+                    Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - 9, 18, 18));
+            g2.setColor(Color.BLACK);
+            for (int i=1; i<path.length-1; i++)
+                    g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i]][0] - leftX) * compressionX + baseX - 5,
+                            Math.abs(coords[path[i]][1] - topY) * compressionY + baseY - 5, 10, 10));
         }
     }
 

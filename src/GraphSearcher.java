@@ -5,7 +5,7 @@ import static java.lang.Math.sqrt;
 /**
  * Author's Name: ThaiBinh Nguyen
  *
- * Implementation of a genetic algorithm for approximating a solution to the Travelling Salesman Problem.
+ * Implementation of a mutating AI algorithm for approximating a solution to the Travelling Salesman Problem.
  * Random paths are generated and the best one (shortest length) is kept at the end of each search.
  */
 public class GraphSearcher implements Runnable {
