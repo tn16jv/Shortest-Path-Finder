@@ -107,7 +107,7 @@ class TravelPanel extends JPanel implements ActionListener {
         g2.draw(new Rectangle2D.Double(baseX, baseY, rectangleWidth, rectangleLength));
         if (solutionPresent) {
             findCompression();
-            baseX+=20; baseY+=20;   // Makes sure that the vertices aren't drawn on the border
+            baseX+=10; baseY+=10;   // Makes sure that the vertices aren't drawn on the border
             // First of the vertices visited gets filled in
             g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - 9,
                     Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - 9, 18, 18));
