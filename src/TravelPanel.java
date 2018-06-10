@@ -16,6 +16,7 @@ class TravelPanel extends JPanel implements ActionListener {
     private JButton coordFile, runSearch;
     private JTextField fileField, bestField, threadsField, searchesField, iterationsField;
     private JLabel fileLabel, bestLabel, threadsLabel, searchesLabel, iterationsLabel;
+    private JCheckBox drawVertexBox;
     private ReadInputFile newReader;
     private InputToGraph newGraph;
     private SearcherCreator newCreator;
@@ -26,6 +27,7 @@ class TravelPanel extends JPanel implements ActionListener {
     protected double leftX, topY, rightX, bottomY;
     private double[][] coords;
     private int[] path;
+    private boolean drawVertices = true;
 
     public TravelPanel() {} // Default constructor
 
@@ -53,6 +55,9 @@ class TravelPanel extends JPanel implements ActionListener {
         threadsField = new JTextField(8);
         searchesField = new JTextField(8);
         iterationsField = new JTextField(8);
+        drawVertexBox = new JCheckBox("Mark vertices(destinations) on the map: ",true);
+        drawVertexBox.setHorizontalTextPosition(SwingConstants.LEFT);
+        drawVertexBox.addActionListener(this);
 
         add(coordFile);
         add(fileLabel);
@@ -66,6 +71,7 @@ class TravelPanel extends JPanel implements ActionListener {
         add(searchesField);
         add(iterationsLabel);
         add(iterationsField);
+        add(drawVertexBox);
     }
 
     // Changes the graph size and where it is drawn based on the master JFrame's current size
@@ -99,6 +105,21 @@ class TravelPanel extends JPanel implements ActionListener {
         compressionY = (compressionY < compressionX) ? compressionY : compressionX; // but produces nicer looking graph
     }
 
+    private void drawVertices(Graphics2D g2) {
+        if (drawVertices) {
+            // First of the vertices visited gets filled in
+            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - 9,
+                    Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - 9, 18, 18));
+            for (int i=1; i<path.length; i++)
+                    g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i-1]][0] - leftX) * compressionX + baseX - 5,
+                            Math.abs(coords[path[i-1]][1] - topY) * compressionY + baseY - 5, 10, 10));
+            // Last of the vertices visited gets filled in
+            if (drawVertices)
+                g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - 9,
+                        Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - 9, 18, 18));
+        }
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -108,14 +129,8 @@ class TravelPanel extends JPanel implements ActionListener {
         if (solutionPresent) {
             findCompression();
             baseX+=10; baseY+=10;   // Makes sure that the vertices aren't drawn on the border
-            // First of the vertices visited gets filled in
-            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - 9,
-                    Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - 9, 18, 18));
-
+            drawVertices(g2);
             for (int i=1; i<path.length; i++) {
-                g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i-1]][0] - leftX) * compressionX + baseX - 5,
-                        Math.abs(coords[path[i-1]][1] - topY) * compressionY + baseY - 5, 10, 10));
-
                 // Algorithm: take away starting point, apply compression, then add the lowest from the respective axis
                 double x1 = Math.abs(coords[path[i-1]][0] - leftX) * compressionX + baseX;
                 double y1 = Math.abs(coords[path[i-1]][1] - topY) * compressionY + baseY;
@@ -123,9 +138,6 @@ class TravelPanel extends JPanel implements ActionListener {
                 double y2 = Math.abs(coords[path[i]][1] - topY) * compressionY + baseY;
                 g2.draw(new Line2D.Double(x1, y1, x2, y2));
             }
-            // Last of the vertices visited gets filled in
-            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - 9,
-                    Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - 9, 18, 18));
         }
     }
 
@@ -164,6 +176,9 @@ class TravelPanel extends JPanel implements ActionListener {
                 File selectedFile = jfc.getSelectedFile();
                 fileField.setText(selectedFile.getAbsolutePath());
             }
+        } else if (source == drawVertexBox) {
+            drawVertices = drawVertexBox.isSelected();
+            this.repaint();
         }
     }
 }
