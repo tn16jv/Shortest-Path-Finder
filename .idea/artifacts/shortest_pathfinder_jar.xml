@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="shortest_pathfinder:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar</output-path>
+    <root id="archive" name="shortest_pathfinder.jar">
+      <element id="module-output" name="shortest_pathfinder" />
+    </root>
+  </artifact>
+</component>

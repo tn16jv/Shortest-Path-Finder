@@ -1,0 +1,3 @@
+IntelliJ Idea
+
+Note: run the program with "berlin52.txt" in the File Path textfield
