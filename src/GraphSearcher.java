@@ -5,10 +5,11 @@ import static java.lang.Math.sqrt;
 /**
  * Author's Name: ThaiBinh Nguyen
  *
- * Implementation of a basic Travelling Salesman Problem algorithm that is extendable to multithreading.
+ * Implementation of a genetic algorithm for approximating the Travelling Salesman problem.
+ * The path is mutated and only the best (shortest length) from each search is kept.
  */
 public class GraphSearcher implements Runnable {
-    Semaphore globalAccess;
+    private Semaphore globalAccess;
     private double[][] graph;
     private double[][] coordinates;
     private int iteration;
