@@ -111,10 +111,11 @@ class TravelPanel extends JPanel implements ActionListener {
             g2.setColor(Color.GREEN);
             g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - 9,
                     Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - 9, 18, 18));
-            g2.setColor(Color.RED);
             // Last of the vertices visited gets filled in
+            g2.setColor(Color.RED);
             g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - 9,
                     Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - 9, 18, 18));
+            // The rest of the vertices (if any) are filled in
             g2.setColor(Color.BLACK);
             for (int i=1; i<path.length-1; i++)
                     g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i]][0] - leftX) * compressionX + baseX - 5,

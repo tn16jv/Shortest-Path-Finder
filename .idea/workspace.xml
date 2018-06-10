@@ -6,11 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c51b7c23-9cf8-4aba-a391-c1fbf6a36811" name="Default" comment="Some very minor reviews of the GraphSearcher">
+    <list default="true" id="c51b7c23-9cf8-4aba-a391-c1fbf6a36811" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/GraphSearcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/GraphSearcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar/shortest_pathfinder.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar/shortest_pathfinder.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TravelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,11 +45,20 @@
       <file leaf-file-name="TravelPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+            <state relative-caret-position="249">
+              <caret line="118" column="37" lean-forward="true" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dummy.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dummy.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -142,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/InputToGraph.java" />
         <option value="$PROJECT_DIR$/berlin52.txt" />
         <option value="$PROJECT_DIR$/example52.txt" />
-        <option value="$PROJECT_DIR$/dummy.txt" />
         <option value="$PROJECT_DIR$/comma.txt" />
         <option value="$PROJECT_DIR$/src/ReadInputFile.java" />
         <option value="$PROJECT_DIR$/src/TravelFrame.java" />
@@ -151,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/SearcherCreator.java" />
         <option value="$PROJECT_DIR$/src/GraphSearcher.java" />
         <option value="$PROJECT_DIR$/src/TravelPanel.java" />
+        <option value="$PROJECT_DIR$/dummy.txt" />
       </list>
     </option>
   </component>
@@ -174,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +208,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -342,7 +349,8 @@
       <workItem from="1528643723747" duration="636000" />
       <workItem from="1528644595784" duration="2230000" />
       <workItem from="1528647142011" duration="748000" />
-      <workItem from="1528647918368" duration="928000" />
+      <workItem from="1528647918368" duration="1088000" />
+      <workItem from="1528649035285" duration="201000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1528643860418</created>
@@ -379,11 +387,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528647863419</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed vertex coloring. Added green for start and red for end.">
+      <created>1528648995441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528648995459</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26950000" />
+    <option name="totallyTimeSpent" value="27311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -440,16 +455,10 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Changed the baseX and baseY of the paintComponent in TravelPanel" />
     <MESSAGE value="Some very minor reviews of the GraphSearcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some very minor reviews of the GraphSearcher" />
+    <MESSAGE value="Fixed vertex coloring. Added green for start and red for end." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed vertex coloring. Added green for start and red for end." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TravelSalesmanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TravelFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -823,10 +832,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dummy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+        <state relative-caret-position="249">
+          <caret line="118" column="37" lean-forward="true" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

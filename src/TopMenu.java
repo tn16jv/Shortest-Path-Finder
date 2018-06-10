@@ -30,7 +30,8 @@ public class TopMenu extends JMenuBar implements ActionListener {
                     "Choose a file that contains several X Y coordinates, X first followed by Y separated by a\n" +
                             "space or comma. Then set the configuration and press the 'Run Search' button to find the\n" +
                             "APPROXIMATE shortest path that traverses it all (Travelling Salesman Problem).\n\n" +
-                            "Look at the example52.txt from the GitHub repository for an example of such a text file.",
+                            "Look at the example52.txt from the GitHub repository for an example of such a text file.\n" +
+                            "NOTE: the file must have atleast 3 coordinates, or else there is no point",
                     "Guide",
                     JOptionPane.PLAIN_MESSAGE);
         } else if (source == about) {
