@@ -18,26 +18,27 @@ public class ReadInputFile {
     }
 
     /*
-    This reads a file with rows having one X coordinate and one Y coordinate separated by spaces.
+    This reads a file with rows having one X coordinate and one Y coordinate separated by spaces or commas.
      */
-    public void readFile(String filePath) {
+    public void readFile(String filePath) throws FileNotFoundException{
         File file = new File(filePath);
         ArrayList<Double> xCoords = new ArrayList<Double>();
         ArrayList<Double> yCoords = new ArrayList<Double>();
-        try {
-            in = new Scanner(file);
-            in.useDelimiter("(\\p{javaWhitespace}|,)+");    //Regular expression(regex) for whitespace or comma
-            while (in.hasNext()) {
-                xCoords.add(in.nextDouble());
-                yCoords.add(in.nextDouble());
-            }
-            rawCoordinates = new double[xCoords.size()][2];
-            for (int i=0; i<xCoords.size(); i++) {
-                rawCoordinates[i][0] = xCoords.get(i);
-                rawCoordinates[i][1] = yCoords.get(i);
-            }
-        } catch (FileNotFoundException e) {
-            return;
+
+        in = new Scanner(file);
+        in.useDelimiter("(\\p{javaWhitespace}|,)+");    //Regular expression(regex) for whitespace or comma
+        while (in.hasNext()) {
+            xCoords.add(in.nextDouble());
+            yCoords.add(in.nextDouble());
+        }
+        // If there are less than 3 coordinates, there is no optimal path. Also problem if not same amount of X and Y
+        if (xCoords.size() < 3 || yCoords.size() < 3 || xCoords.size()!=yCoords.size())
+            throw new NegativeArraySizeException();
+
+        rawCoordinates = new double[xCoords.size()][2];
+        for (int i=0; i<xCoords.size(); i++) {
+            rawCoordinates[i][0] = xCoords.get(i);
+            rawCoordinates[i][1] = yCoords.get(i);
         }
     }
 

@@ -3,6 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.geom.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
@@ -162,22 +163,25 @@ class TravelPanel extends JPanel implements ActionListener {
                 path = newCreator.getPath();
                 this.repaint();
             } catch (NumberFormatException | NoSuchElementException e) {
-                fileField.setText("Invalid file format");
-                return;
-            } catch (NullPointerException e) {
-                fileField.setText("INVALID");
-                return;
+                JOptionPane.showMessageDialog(null,
+                        "Invalid file format. Please consult Guide.", "Error", JOptionPane.ERROR_MESSAGE);
+            } catch (FileNotFoundException e) {
+                JOptionPane.showMessageDialog(null,
+                        "File not found", "Error", JOptionPane.ERROR_MESSAGE);
+            } catch (NegativeArraySizeException e) {
+                JOptionPane.showMessageDialog(null,
+                        "List of coordinates is too small (less than 3)", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else if (source == coordFile) {       // Code for a Java file chooser
             solutionPresent = false;
-            JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+            JFileChooser jfc = new JFileChooser(System.getProperty("user.dir"));     // Current working directory
             int returnValue = jfc.showOpenDialog(null);
 
             if (returnValue == JFileChooser.APPROVE_OPTION) {   // Once user selects and approves the file
                 File selectedFile = jfc.getSelectedFile();
                 fileField.setText(selectedFile.getAbsolutePath());
             }
-        } else if (source == drawVertexBox) {
+        } else if (source == drawVertexBox) {   // Code for checkbox specifying whether to mark the vertices
             drawVertices = drawVertexBox.isSelected();
             this.repaint();
         }
