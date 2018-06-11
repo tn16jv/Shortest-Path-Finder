@@ -173,7 +173,6 @@ class TravelPanel extends JPanel implements ActionListener {
                         "List of coordinates is too small (less than 3)", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else if (source == coordFile) {       // Code for a Java file chooser
-            solutionPresent = false;
             JFileChooser jfc = new JFileChooser(System.getProperty("user.dir"));     // Current working directory
             int returnValue = jfc.showOpenDialog(null);
 
