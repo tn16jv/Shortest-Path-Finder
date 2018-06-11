@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c51b7c23-9cf8-4aba-a391-c1fbf6a36811" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/notenough.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/ReadInputFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/ReadInputFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelMousePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelMousePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadInputFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadInputFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar/shortest_pathfinder.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar/shortest_pathfinder.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TravelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,8 +45,8 @@
       <file leaf-file-name="TravelPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="177" column="67" selection-start-line="177" selection-start-column="67" selection-end-line="177" selection-end-column="67" />
+            <state relative-caret-position="400">
+              <caret line="166" column="56" selection-start-line="166" selection-start-column="56" selection-end-line="166" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,7 +78,7 @@
       <file leaf-file-name="ReadInputFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ReadInputFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="510">
               <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
             </state>
           </provider>
@@ -189,6 +184,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,8 +214,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +361,8 @@
       <workItem from="1528697632319" duration="1078000" />
       <workItem from="1528698784195" duration="783000" />
       <workItem from="1528721930247" duration="179000" />
-      <workItem from="1528725481829" duration="1661000" />
+      <workItem from="1528725481829" duration="1867000" />
+      <workItem from="1528727937137" duration="291000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1528643860418</created>
@@ -424,14 +420,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528699566296</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed ReadInputFile and some changes to the filechooser in TravelPanel">
+      <created>1528727352245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1528727352245</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31692000" />
+    <option name="totallyTimeSpent" value="32189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -444,11 +447,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3304721" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32731137" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2045929" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10208333" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -487,7 +490,8 @@
     <MESSAGE value="Some very minor reviews of the GraphSearcher" />
     <MESSAGE value="Fixed vertex coloring. Added green for start and red for end." />
     <MESSAGE value="Fixed the scaling of the graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the scaling of the graph" />
+    <MESSAGE value="Fixed ReadInputFile and some changes to the filechooser in TravelPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed ReadInputFile and some changes to the filechooser in TravelPanel" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/TopMenu.java">
@@ -859,15 +863,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ReadInputFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="510">
           <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="177" column="67" selection-start-line="177" selection-start-column="67" selection-end-line="177" selection-end-column="67" />
+        <state relative-caret-position="400">
+          <caret line="166" column="56" selection-start-line="166" selection-start-column="56" selection-end-line="166" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

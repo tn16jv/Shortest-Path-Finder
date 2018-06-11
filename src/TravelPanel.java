@@ -162,12 +162,12 @@ class TravelPanel extends JPanel implements ActionListener {
                 coords = newReader.getCoordinates();
                 path = newCreator.getPath();
                 this.repaint();
-            } catch (NumberFormatException | NoSuchElementException e) {
+            } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null,
-                        "Invalid file format. Please consult Guide.", "Error", JOptionPane.ERROR_MESSAGE);
-            } catch (FileNotFoundException e) {
+                        "Invalid input (must be numbers)", "Error", JOptionPane.ERROR_MESSAGE);
+            } catch (FileNotFoundException | NoSuchElementException e) {
                 JOptionPane.showMessageDialog(null,
-                        "File not found", "Error", JOptionPane.ERROR_MESSAGE);
+                        "File not found or file format is invalid. Consult Help/Guide", "Error", JOptionPane.ERROR_MESSAGE);
             } catch (NegativeArraySizeException e) {
                 JOptionPane.showMessageDialog(null,
                         "List of coordinates is too small (less than 3)", "Error", JOptionPane.ERROR_MESSAGE);
