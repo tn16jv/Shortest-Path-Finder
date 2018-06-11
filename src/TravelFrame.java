@@ -10,7 +10,7 @@ public class TravelFrame extends JFrame {
     public TravelFrame(ReadInputFile newReader, InputToGraph graphMaker, SearcherCreator creator) {
         setTitle("Travelling Salesman Problem Solver");
         setSize(1200, 1000);
-        setMinimumSize(new Dimension(900, 600));
+        setMinimumSize(new Dimension(900, 700));
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -22,7 +22,7 @@ public class TravelFrame extends JFrame {
 
         this.setJMenuBar(new TopMenu(this));
 
-        TravelMousePanel panel = new TravelMousePanel(newReader, graphMaker, creator, this);
+        TravelMousePanel panel = new TravelMousePanel(newReader, graphMaker, creator);
         contentPane.add(panel);
         this.setVisible(true);
     }

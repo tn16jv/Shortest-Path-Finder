@@ -10,8 +10,8 @@ import java.awt.event.MouseMotionListener;
 public class TravelMousePanel extends TravelPanel implements MouseMotionListener {
     private JLabel xyLabel;
 
-    public TravelMousePanel(ReadInputFile newReader, InputToGraph graphMaker, SearcherCreator creator, JFrame aFrame) {
-        super(newReader, graphMaker, creator, aFrame);
+    public TravelMousePanel(ReadInputFile newReader, InputToGraph graphMaker, SearcherCreator creator) {
+        super(newReader, graphMaker, creator);
         addMouseMotionListener(this);
 
         xyLabel = new JLabel("X:  Y:");
@@ -28,8 +28,8 @@ public class TravelMousePanel extends TravelPanel implements MouseMotionListener
     }
 
     private void saySomething(String message, MouseEvent e) {
-        if (e.getX() >= baseX && e.getX() <= (baseX+rectangleWidth) &&  // If solution was found and mouse in the graph
-                e.getY() >= baseY && e.getY() <= (baseY+rectangleLength) && solutionPresent) {
+        if (e.getX() >= baseX && e.getX() <= (baseX+graphWidth) &&  // If solution was found and mouse in the graph
+                e.getY() >= baseY && e.getY() <= (baseY+graphHeight) && solutionPresent) {
             xyLabel.setText(relativeMousePosition(e.getX(), e.getY()));
         } else {    // When there is no solution or the mouse is outside of the graph
             xyLabel.setText("X:  Y:");

@@ -20,10 +20,9 @@ class TravelPanel extends JPanel implements ActionListener {
     private ReadInputFile newReader;
     private InputToGraph newGraph;
     private SearcherCreator newCreator;
-    private JFrame master;
 
     protected boolean solutionPresent;
-    protected double baseX = 100.0, baseY=100.0, rectangleWidth = 800, rectangleLength = 800, compressionX, compressionY;
+    protected double baseX, baseY, graphWidth, graphHeight, compressionX, compressionY;
     protected double leftX, topY, rightX, bottomY;
     private double[][] coords;
     private int[] path;
@@ -31,11 +30,10 @@ class TravelPanel extends JPanel implements ActionListener {
 
     public TravelPanel() {} // Default constructor
 
-    public TravelPanel(ReadInputFile refReader, InputToGraph graphMaker, SearcherCreator creator, JFrame aFrame) {
+    public TravelPanel(ReadInputFile refReader, InputToGraph graphMaker, SearcherCreator creator) {
         newReader = refReader;
         newGraph = graphMaker;
         newCreator = creator;
-        master = aFrame;
         solutionPresent = false;
 
         coordFile = new JButton("Choose File");
@@ -74,12 +72,12 @@ class TravelPanel extends JPanel implements ActionListener {
         add(drawVertexBox);
     }
 
-    // Changes the graph size and where it is drawn based on the master JFrame's current size
+    // Changes the graph size and where it is drawn based on the JPanel's size, which is determined by the master JFrame
     private void resize() {
-        rectangleWidth = master.getWidth()*0.75;        // Width and length of the graph is determined by the JFrame
-        rectangleLength = master.getHeight()*0.75;
-        baseX = master.getWidth() * 0.25 / 2;       // The base X and Y the graph is drawn on is determined by JFrame
-        baseY = master.getHeight() * 0.25 / 2;
+        graphWidth = this.getWidth() - 20 * 2;        // Width and length of the graph is determined by the JPanel
+        graphHeight = this.getHeight() - (100 + 20);
+        baseX = 20;         // The starting X should always be the same
+        baseY = 100;        // The starting Y is always just under all the GUI elements
     }
 
     // Finds the ratio for X and Y in order to keep every drawn path in the rectangle box
@@ -98,8 +96,8 @@ class TravelPanel extends JPanel implements ActionListener {
             if (bottomY < coords[i][1]) // bottomY becomes the highest Y each iteration
                 bottomY = coords[i][1];
         }
-        compressionX = (rectangleWidth - 50) / Math.abs(rightX - leftX);       // Take away 50 to shrink down a little
-        compressionY = (rectangleLength - 50) / Math.abs(topY - bottomY);      // 0.2 is the most aesthetic though
+        compressionX = (graphWidth - 50) / Math.abs(rightX - leftX);       // Take away 50 to shrink down a little
+        compressionY = (graphHeight - 50) / Math.abs(topY - bottomY);      // 0.2 is the most aesthetic though
 
         compressionX = (compressionX < compressionY) ? compressionX : compressionY; // These 2 lines not needed
         compressionY = (compressionY < compressionX) ? compressionY : compressionX; // but produces nicer looking graph
@@ -128,7 +126,7 @@ class TravelPanel extends JPanel implements ActionListener {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         resize();
-        g2.draw(new Rectangle2D.Double(baseX, baseY, rectangleWidth, rectangleLength));
+        g2.draw(new Rectangle2D.Double(baseX, baseY, graphWidth, graphHeight));
         if (solutionPresent) {
             findCompression();
             baseX+=10; baseY+=10;   // Makes sure that the vertices aren't drawn on the border
