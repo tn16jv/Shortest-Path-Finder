@@ -27,8 +27,8 @@ public class TravelMousePanel extends TravelPanel implements MouseMotionListener
     }
 
     private void saySomething(String message, MouseEvent e) {
-        if (e.getX() >= baseX-10 && e.getX() <= (baseX+graphWidth) &&  // If a solution exists and mouse is in the graph
-                e.getY() >= baseY-10 && e.getY() <= (baseY+graphHeight) && solutionPresent) {
+        if (e.getX() >= baseX && e.getX() <= (baseX+graphWidth) &&  // If a solution exists and mouse is in the graph
+                e.getY() >= baseY && e.getY() <= (baseY+graphHeight) && solutionPresent) {
             xyLabel.setText(relativeMousePosition(e.getX(), e.getY()));
         } else {    // When there is no solution or the mouse is outside of the graph
             xyLabel.setText("X:  Y:");
