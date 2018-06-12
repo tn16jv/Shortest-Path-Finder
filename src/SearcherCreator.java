@@ -7,11 +7,11 @@ import java.util.ArrayList;
  * the global best score for all of the GraphSearcher threads running.
  */
 public class SearcherCreator {
-    private Double score;
+    private Double overallBestScore, currentBestScore;
     private int[] path;
 
     public SearcherCreator() {
-        score = Double.MAX_VALUE;
+        overallBestScore = Double.MAX_VALUE;
     }
 
     public void newSearch(int threads, int searches, int iterations, double[][] newGraph, double[][] coords) {
@@ -31,17 +31,18 @@ public class SearcherCreator {
             t[i].start();
         }
 
-        synchronized (t) {
+        synchronized (t) {  // Working with the threads t after they start
             try {
-                for (int i=0; i<threads; i++) {
+                for (int i=0; i<threads; i++) { // Joins all the threads to stop them all when all finishes
                     t[i].join();
                 }
             } catch (InterruptedException e) {
                 return;
             }
             System.out.println("This run's global score: " + bestScore.get(0));
-            if (score > bestScore.get(0))
-                score = bestScore.get(0);
+            currentBestScore = bestScore.get(0);
+            if (overallBestScore > bestScore.get(0))    // Updates best overall score
+                overallBestScore = bestScore.get(0);
             path = bestPath.get(0);
         }
         try {
@@ -50,15 +51,20 @@ public class SearcherCreator {
         }
     }
 
-    public String getScore() {
-        String formattedScore = String.format("%.5f", score);   // Rounds to 5 decimal places
+    public String getCurrentScore() {
+        String formattedScore = String.format("%.5f", currentBestScore);   // Rounds to 5 decimal places
         return formattedScore;
     }
 
-    public double getRealScore() {
-        return score;
+    public String getBestScore() {
+        String formattedScore = String.format("%.5f", overallBestScore);   // Rounds to 5 decimal places
+        return formattedScore;
     }
 
+    public double getRealCurrentScore() { return currentBestScore; }
+    public double getRealBestScore() { return overallBestScore; }
+
+    // Returns a String that contains the best path
     public String getPath2() {
         String newStr = "";
         for (int i=0; i<path.length; i++) {

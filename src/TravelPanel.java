@@ -15,8 +15,8 @@ import javax.swing.filechooser.FileSystemView;
  */
 class TravelPanel extends JPanel implements ActionListener {
     private JButton coordFile, runSearch;
-    private JTextField fileField, bestField, threadsField, searchesField, iterationsField;
-    private JLabel fileLabel, bestLabel, threadsLabel, searchesLabel, iterationsLabel;
+    private JTextField fileField, bestField, currentBestField, threadsField, searchesField, iterationsField;
+    private JLabel fileLabel, bestLabel, currentBestLabel, threadsLabel, searchesLabel, iterationsLabel;
     private JCheckBox drawVertexBox;
     private ReadInputFile newReader;
     private InputToGraph newGraph;
@@ -43,18 +43,21 @@ class TravelPanel extends JPanel implements ActionListener {
         runSearch.addActionListener(this);
 
         fileLabel = new JLabel("File Path");
-        bestLabel = new JLabel("Current Best");
         threadsLabel = new JLabel("Number of Threads");
         searchesLabel = new JLabel("Number of Searches");
         iterationsLabel = new JLabel("Number of Iterations");
+        bestLabel = new JLabel("Overall Best");
+        currentBestLabel = new JLabel("Current Best");
 
         fileField = new JTextField(20);
-        bestField = new JTextField(8);
-        bestField.setEditable(false);
         threadsField = new JTextField(8);
         searchesField = new JTextField(8);
         iterationsField = new JTextField(8);
-        drawVertexBox = new JCheckBox("Mark vertices(destinations) on the map: ",true);
+        bestField = new JTextField(8);
+        bestField.setEditable(false);
+        currentBestField = new JTextField(8);
+        currentBestField.setEditable(false);
+        drawVertexBox = new JCheckBox("Mark vertices (destinations) on the map: ",true);
         drawVertexBox.setHorizontalTextPosition(SwingConstants.LEFT);
         drawVertexBox.addActionListener(this);
 
@@ -62,14 +65,16 @@ class TravelPanel extends JPanel implements ActionListener {
         add(fileLabel);
         add(fileField);
         add(runSearch);
-        add(bestLabel);
-        add(bestField);
         add(threadsLabel);
         add(threadsField);
         add(searchesLabel);
         add(searchesField);
         add(iterationsLabel);
         add(iterationsField);
+        add(bestLabel);
+        add(bestField);
+        add(currentBestLabel);
+        add(currentBestField);
         add(drawVertexBox);
     }
 
@@ -97,11 +102,11 @@ class TravelPanel extends JPanel implements ActionListener {
             if (bottomY < coords[i][1]) // bottomY becomes the highest Y each iteration
                 bottomY = coords[i][1];
         }
-        compressionX = (graphWidth - 50) / Math.abs(rightX - leftX);       // Take away 50 to shrink down a little
-        compressionY = (graphHeight - 50) / Math.abs(topY - bottomY);      // 0.2 is the most aesthetic though
+        compressionX = (graphWidth - 20) / Math.abs(rightX - leftX);       // Take away 20 to shrink down a little
+        compressionY = (graphHeight - 20) / Math.abs(topY - bottomY);      // do not want to be drawn on the border
 
-        compressionX = (compressionX < compressionY) ? compressionX : compressionY; // These 2 lines not needed
-        compressionY = (compressionY < compressionX) ? compressionY : compressionX; // but produces nicer looking graph
+        compressionX = (compressionX < compressionY) ? compressionX : compressionY; // Sets the compression ratios to
+        compressionY = (compressionY < compressionX) ? compressionY : compressionX; // the lowest one out of X and Y
     }
 
     private void drawVertices(Graphics2D g2) {
@@ -157,7 +162,8 @@ class TravelPanel extends JPanel implements ActionListener {
 
                 newCreator.newSearch(threadCount, searchCount, iterationsCount,
                                 newGraph.getGraph(), newReader.getCoordinates());   // Create the multithreaded searches
-                bestField.setText(newCreator.getScore());
+                bestField.setText(newCreator.getBestScore());
+                currentBestField.setText(newCreator.getCurrentScore());
                 solutionPresent = true;
                 coords = newReader.getCoordinates();
                 path = newCreator.getPath();

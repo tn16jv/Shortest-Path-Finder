@@ -15,7 +15,7 @@ public class TravelMousePanel extends TravelPanel implements MouseMotionListener
         addMouseMotionListener(this);
 
         xyLabel = new JLabel("X:  Y:");
-        xyLabel.setBorder(BorderFactory.createEmptyBorder(10, 500, 10, 500));
+        xyLabel.setBorder(BorderFactory.createEmptyBorder(10, 2000, 10, 2000));
         this.add(xyLabel);
     }
 

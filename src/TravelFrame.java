@@ -10,7 +10,7 @@ public class TravelFrame extends JFrame {
     public TravelFrame(ReadInputFile newReader, InputToGraph graphMaker, SearcherCreator creator) {
         setTitle("Travelling Salesman Problem Solver");
         setSize(1200, 1000);
-        setMinimumSize(new Dimension(900, 700));
+        setMinimumSize(new Dimension(950, 700));
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
