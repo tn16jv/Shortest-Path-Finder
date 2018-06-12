@@ -144,6 +144,7 @@ class TravelPanel extends JPanel implements ActionListener {
                 double y2 = Math.abs(coords[path[i]][1] - topY) * compressionY + baseY;
                 g2.draw(new Line2D.Double(x1, y1, x2, y2));
             }
+            baseX-=10; baseY-=10;   // Resets the baseX and baseY after vertices drawn
         }
     }
 
