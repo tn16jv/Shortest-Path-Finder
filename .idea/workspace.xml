@@ -8,10 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c51b7c23-9cf8-4aba-a391-c1fbf6a36811" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar/shortest_pathfinder.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shortest_pathfinder_jar/shortest_pathfinder.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/SearcherCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/SearcherCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelMousePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelMousePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphSearcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SearcherCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearcherCreator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/TravelFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -48,8 +45,8 @@
       <file leaf-file-name="TravelPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="156" column="31" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
+            <state relative-caret-position="195">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,23 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphSearcher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GraphSearcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraphSearcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="95" column="108" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
+            <state relative-caret-position="467">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearcherCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearcherCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SearcherCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            <state relative-caret-position="330">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
-                <element signature="e#3086#3087#0" expanded="true" />
-                <element signature="e#3113#3114#0" expanded="true" />
+                <element signature="e#2994#2995#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/TopMenu.java" />
         <option value="$PROJECT_DIR$/src/TravelPanel.java" />
         <option value="$PROJECT_DIR$/src/TravelMousePanel.java" />
-        <option value="$PROJECT_DIR$/src/SearcherCreator.java" />
         <option value="$PROJECT_DIR$/src/GraphSearcher.java" />
+        <option value="$PROJECT_DIR$/src/SearcherCreator.java" />
       </list>
     </option>
   </component>
@@ -182,8 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,6 +212,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,7 +401,9 @@
       <workItem from="1528786320983" duration="92000" />
       <workItem from="1528787278285" duration="23000" />
       <workItem from="1528822807532" duration="358000" />
-      <workItem from="1528823329211" duration="2008000" />
+      <workItem from="1528823329211" duration="2040000" />
+      <workItem from="1528826729390" duration="11000" />
+      <workItem from="1528827916030" duration="536000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1528643860418</created>
@@ -518,14 +517,22 @@
       <option name="project" value="LOCAL" />
       <updated>1528784426160</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Solved edge case of 1 thread">
+      <created>1528825368817</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1528825368817</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40822000" />
+    <option name="totallyTimeSpent" value="41401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -533,11 +540,11 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32731137" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32731137" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
@@ -587,7 +594,8 @@
     <MESSAGE value="Small inconsequential changes" />
     <MESSAGE value="Fix to the TravelMousePanel" />
     <MESSAGE value="Fix to the mousetracking in TravelMousePanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix to the mousetracking in TravelMousePanel" />
+    <MESSAGE value="Solved edge case of 1 thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved edge case of 1 thread" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/TopMenu.java">
@@ -916,16 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TopMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TravelMousePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -943,38 +941,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/TravelFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="156" column="31" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
+        <state relative-caret-position="51">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TopMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TravelFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        <state relative-caret-position="467">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SearcherCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="330">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="e#3086#3087#0" expanded="true" />
-            <element signature="e#3113#3114#0" expanded="true" />
+            <element signature="e#2994#2995#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="95" column="108" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
         </state>
       </provider>
     </entry>

@@ -22,7 +22,7 @@ public class SearcherCreator {
         ArrayList<Double> bestScore = new ArrayList<Double>();      // I used ArrayList, because Double() didn't work
         bestScore.add(Double.MAX_VALUE);                            // Add arbitrarily large value
         ArrayList<int[]> bestPath = new ArrayList<int[]>();         // again ArrayList, because collections synchronize
-        int[] fillerArray = {1,2,3,4,5};
+        int[] fillerArray = {0};
         bestPath.add(fillerArray);
 
         for (int i=0; i<threads; i++) {
