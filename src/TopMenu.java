@@ -1,7 +1,11 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Author's Name: ThaiBinh Nguyen
+ *
+ * Gives a top menu for the user to learn more about the Travelling Salesman Solver.
+ */
 public class TopMenu extends JMenuBar implements ActionListener {
     private JMenu help;
     private JMenuItem guide, about;

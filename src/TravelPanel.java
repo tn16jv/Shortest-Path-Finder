@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
 import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileSystemView;
 /**
  * Author's Name: ThaiBinh Nguyen
  *
