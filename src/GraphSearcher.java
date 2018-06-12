@@ -93,7 +93,7 @@ public class GraphSearcher implements Runnable {
             random[2] = (int) (Math.random() * (arr.length));
         }
 
-        /*
+        /* Code for shift one over permutation (not random enough, but less overhead than the full below it)
         int tmp = arr[random[0]];                   // Keep first element
         for (int i=0; i<random.length-1; i++) {     // Shifts each vertex over one and ends before last one
             arr[random[i]] = arr[random[i+1]];

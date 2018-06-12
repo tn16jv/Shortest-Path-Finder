@@ -17,7 +17,7 @@ public class SearcherCreator {
     public void newSearch(int threads, int searches, int iterations, double[][] newGraph, double[][] coords) {
         GraphSearcher[] searchers = new GraphSearcher[threads];
         Thread[] t = new Thread[threads];
-        Semaphore accessScore = new Semaphore(threads - 1); // Semaphores to control access
+        Semaphore accessScore = new Semaphore(threads); // Semaphores to control access
 
         ArrayList<Double> bestScore = new ArrayList<Double>();      // I used ArrayList, because Double() didn't work
         bestScore.add(Double.MAX_VALUE);                            // Add arbitrarily large value
