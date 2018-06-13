@@ -139,7 +139,7 @@ class TravelPanel extends JPanel implements ActionListener {
         g2.draw(new Rectangle2D.Double(baseX, baseY, graphWidth, graphHeight));
         if (solutionPresent) {
             findCompression();
-            baseX+=10; baseY+=10;   // Makes sure that the vertices aren't drawn on the border
+            baseX+=markerSize; baseY+=markerSize;   // Makes sure that the vertices markers aren't drawn on the border
             drawVertices(g2);
             for (int i=1; i<path.length; i++) {
                 // Algorithm: take away starting point, apply compression, then add the lowest from the respective axis
@@ -149,7 +149,7 @@ class TravelPanel extends JPanel implements ActionListener {
                 double y2 = Math.abs(coords[path[i]][1] - topY) * compressionY + baseY;
                 g2.draw(new Line2D.Double(x1, y1, x2, y2));
             }
-            baseX-=10; baseY-=10;   // Resets the baseX and baseY after vertices drawn
+            baseX-=markerSize; baseY-=markerSize;   // Resets the baseX and baseY after vertices drawn
         }
     }
 
