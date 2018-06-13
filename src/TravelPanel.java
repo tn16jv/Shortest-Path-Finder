@@ -22,6 +22,7 @@ class TravelPanel extends JPanel implements ActionListener {
     private SearcherCreator newCreator;
 
     protected boolean solutionPresent;
+    protected int markerSize;   // How large the markers on each destination are. Will be used in calculations.
     protected double baseX, baseY, graphWidth, graphHeight, compressionX, compressionY;
     protected double leftX, topY, rightX, bottomY;
     private double[][] coords;
@@ -35,6 +36,7 @@ class TravelPanel extends JPanel implements ActionListener {
         newGraph = graphMaker;
         newCreator = creator;
         solutionPresent = false;
+        markerSize = 10;
 
         coordFile = new JButton("Choose File");
         coordFile.addActionListener(this);
@@ -112,17 +114,20 @@ class TravelPanel extends JPanel implements ActionListener {
         if (drawVertices) {
             // First of the vertices visited gets filled in
             g2.setColor(Color.GREEN);
-            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - 9,
-                    Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - 9, 18, 18));
+            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[0]][0] - leftX) * compressionX + baseX - markerSize,
+                    Math.abs(coords[path[0]][1] - topY) * compressionY + baseY - markerSize,
+                    markerSize*2, markerSize*2));
             // Last of the vertices visited gets filled in
             g2.setColor(Color.RED);
-            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - 9,
-                    Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - 9, 18, 18));
+            g2.fill(new Ellipse2D.Double(Math.abs(coords[path[path.length-1]][0] - leftX) * compressionX + baseX - markerSize,
+                    Math.abs(coords[path[path.length-1]][1] - topY) * compressionY + baseY - markerSize,
+                    markerSize*2, markerSize*2));
             // The rest of the vertices (if any) are filled in
             g2.setColor(Color.BLACK);
             for (int i=1; i<path.length-1; i++)
-                    g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i]][0] - leftX) * compressionX + baseX - 5,
-                            Math.abs(coords[path[i]][1] - topY) * compressionY + baseY - 5, 10, 10));
+                    g2.draw(new Ellipse2D.Double(Math.abs(coords[path[i]][0] - leftX) * compressionX + baseX - markerSize/2,
+                            Math.abs(coords[path[i]][1] - topY) * compressionY + baseY - markerSize/2,
+                            markerSize, markerSize));
         }
     }
 
@@ -134,7 +139,7 @@ class TravelPanel extends JPanel implements ActionListener {
         g2.draw(new Rectangle2D.Double(baseX, baseY, graphWidth, graphHeight));
         if (solutionPresent) {
             findCompression();
-            baseX+=10; baseY+=10;   // Makes sure that the vertices aren't drawn on the border
+            baseX+=markerSize; baseY+=markerSize;   // Makes sure that the vertices markers aren't drawn on the border
             drawVertices(g2);
             for (int i=1; i<path.length; i++) {
                 // Algorithm: take away starting point, apply compression, then add the lowest from the respective axis
@@ -144,7 +149,7 @@ class TravelPanel extends JPanel implements ActionListener {
                 double y2 = Math.abs(coords[path[i]][1] - topY) * compressionY + baseY;
                 g2.draw(new Line2D.Double(x1, y1, x2, y2));
             }
-            baseX-=10; baseY-=10;   // Resets the baseX and baseY after vertices drawn
+            baseX-=markerSize; baseY-=markerSize;   // Resets the baseX and baseY after vertices drawn
         }
     }
 
