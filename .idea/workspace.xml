@@ -8,9 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c51b7c23-9cf8-4aba-a391-c1fbf6a36811" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelMousePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/TravelMousePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TravelMousePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelMousePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TravelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TravelPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shortest_pathfinder/SearcherCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shortest_pathfinder/SearcherCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SearcherCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearcherCreator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TravelPanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TravelPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,8 +57,8 @@
       <file leaf-file-name="TravelMousePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TravelMousePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+            <state relative-caret-position="17">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,17 +69,21 @@
       <file leaf-file-name="GraphSearcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraphSearcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
+            <state relative-caret-position="467">
               <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearcherCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearcherCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SearcherCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="330">
               <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+              <folding>
+                <element signature="e#2994#2995#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,10 +152,10 @@
         <option value="$PROJECT_DIR$/src/ReadInputFile.java" />
         <option value="$PROJECT_DIR$/src/TravelFrame.java" />
         <option value="$PROJECT_DIR$/src/TopMenu.java" />
+        <option value="$PROJECT_DIR$/src/TravelPanel.java" />
+        <option value="$PROJECT_DIR$/src/TravelMousePanel.java" />
         <option value="$PROJECT_DIR$/src/GraphSearcher.java" />
         <option value="$PROJECT_DIR$/src/SearcherCreator.java" />
-        <option value="$PROJECT_DIR$/src/TravelMousePanel.java" />
-        <option value="$PROJECT_DIR$/src/TravelPanel.java" />
       </list>
     </option>
   </component>
@@ -177,7 +180,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +213,7 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,10 +403,7 @@
       <workItem from="1528822807532" duration="358000" />
       <workItem from="1528823329211" duration="2040000" />
       <workItem from="1528826729390" duration="11000" />
-      <workItem from="1528827916030" duration="651000" />
-      <workItem from="1528893284367" duration="515000" />
-      <workItem from="1528894559659" duration="1189000" />
-      <workItem from="1528899770802" duration="1071000" />
+      <workItem from="1528827916030" duration="536000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1528643860418</created>
@@ -524,18 +524,11 @@
       <option name="project" value="LOCAL" />
       <updated>1528825368817</updated>
     </task>
-    <task id="LOCAL-00018" summary="Solved edge case of 1 thread">
-      <created>1528828564036</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1528828564036</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44291000" />
+    <option name="totallyTimeSpent" value="41401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -931,6 +924,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TravelMousePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InputToGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -945,20 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SearcherCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TopMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -969,22 +958,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TravelMousePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+        <state relative-caret-position="467">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TravelPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/SearcherCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
+        <state relative-caret-position="330">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2994#2995#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -40,10 +40,8 @@ public class TravelMousePanel extends TravelPanel implements MouseMotionListener
     where the graph is drawn, along with inverting the compression ratio that was used to draw the graph.
      */
     private String relativeMousePosition(int x, int y) {
-        double relativeX = round((x - baseX) * (1/compressionX) + leftX, 5) - markerSize - markerSize/2;
-        double relativeY = round((y - baseY) * (1/compressionY) + topY, 5) - markerSize - markerSize/2;
-        // markerSize needs to be accounted. The top left of the marker is the real X Y location (so half above), in
-        // addition to the shift of 1 markerSize from the top left (so that no markers are on the top, left borders)
+        double relativeX = round((x - baseX) * (1/compressionX) + leftX, 5);
+        double relativeY = round((y - baseY) * (1/compressionY) + topY, 5);
         return "X: " + relativeX + "  Y: " + relativeY;
     }
 
