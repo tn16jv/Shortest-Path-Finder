@@ -1,6 +1,8 @@
 # Shortest Path Finder
 Java application that will use artificial intelligence to approximate solutions to the Travelling Salesman problem in
-any given map. It also provides a visualization of the path taken.
+any given set of locations. It also provides a visualization of the path taken.
+
+Travelling Salesman Problem: visit each of the designated locations once, in the most efficient way.
 
 ### Installing
 Download 'shortest_pathfinder.jar' from the repository. Also have Java installed.
@@ -13,12 +15,12 @@ iterations. Good baseline is 10 threads, 50 searches, 10000 iterations.
 
 &nbsp;
 <p align = "center">
-    <img src="https://github.com/tn16jv/Shortest-Path-Finder/blob/master/images/example1.PNG" alt="Good Example">
+    <img src="https://github.com/tn16jv/Shortest-Path-Finder/blob/VertexMarkers/images/example1.png" alt="Good Example">
     Standard run
 </p>
 
 &nbsp;
 <p align = "center">
-    <img src="https://github.com/tn16jv/Shortest-Path-Finder/blob/master/images/example2.PNG" alt="Bad Example">
+    <img src="https://github.com/tn16jv/Shortest-Path-Finder/blob/VertexMarkers/images/example2.png" alt="Bad Example">
     Essentially a random path. See how random and disjointed it is from a learned path.
 </p>
