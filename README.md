@@ -13,6 +13,8 @@ Download 'shortest_pathfinder.jar' from the repository. Also have Java installed
 iterations. Good baseline is 10 threads, 50 searches, 10000 iterations.
 * The distance of the shortest path found will be shown in the box.
 
+Note: drag your cursor across the map to see the corresponding X Y coordinates.
+
 &nbsp;
 <p align = "center">
     <img src="https://github.com/tn16jv/Shortest-Path-Finder/blob/VertexMarkers/images/example1.png" alt="Good Example">
