@@ -4,9 +4,6 @@ any given set of locations. It also provides a visualization of the path taken.
 
 Travelling Salesman Problem: visit each of the designated locations once, in the most efficient way.
 
-### Installing
-Download 'shortest_pathfinder.jar' from the repository. Also have Java installed.
-
 ### Running
 * Have a file full of X Y coordinates separated by either spaces or commas. You can use the ones found in 'examples'
 * Specify the number of threads (how many threads will be running searches), the number of searches, and number of
